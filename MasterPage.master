@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Video Rental</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+    <asp:ContentPlaceHolder id="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="PageForm" runat="server">
+        <div class="wrapper">
+            <div class="inner_wrapper">
+                <header>
+                    <div class="logo">
+                        <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/logo.gif" />
+                    </div>
+                    <div class="search">
+                        <asp:Label ID="lblSearch" runat="server" Text="Search"></asp:Label>
+                        <asp:DropDownList ID="ddlSearch" runat="server">
+                            <asp:ListItem>Title</asp:ListItem>
+                            <asp:ListItem>Cast</asp:ListItem>
+                            <asp:ListItem>Company</asp:ListItem>
+                            <asp:ListItem>Director</asp:ListItem>
+                            <asp:ListItem>Editor</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+                        <asp:Button ID="btnSearch" runat="server" Text="Search" />
+                    </div>
+                </header>
+                <div class="content gradient">
+                    <asp:ContentPlaceHolder id="PageContent" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Copyright: Oskar Danielsson, 2015</p>
+            <p>Inspired by NetFlix. All content is property of the author or freely usable media.</p>
+        </footer>
+    </form>
+</body>
+</html>

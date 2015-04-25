@@ -1,0 +1,127 @@
+﻿html, body {
+    height: 100%;
+    min-width: 740px;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    position: relative;
+    background-color: #b5bdc8;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+.inner_wrapper {
+    overflow:auto;
+	padding-bottom: 140px;
+}
+
+header {
+    display: inline-block;
+    width: 100%;
+    height: 360px;
+    background-image: url("../images/Children_watching_TV_(cropped).jpg");
+    background-size: cover;
+}
+
+.content {
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+footer {
+    position: relative;
+	margin-top: -140px; /* negative value of footer height */
+	height: 140px;
+	clear:both;
+}
+
+footer p {
+    text-align: center;
+}
+
+.logo {
+    float: left;
+    background: #ff2929;
+    background-image: -webkit-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -moz-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -ms-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -o-linear-gradient(top, #ff2929, #cf1414);
+    background-image: linear-gradient(to bottom, #ff2929, #cf1414);
+    -webkit-border-bottom-right-radius: 5;
+    -moz-border-bottom-right-radius: 5;
+    border-bottom-right-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+.search {
+    float: right;
+    background: #ff2929;
+    background-image: -webkit-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -moz-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -ms-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -o-linear-gradient(top, #ff2929, #cf1414);
+    background-image: linear-gradient(to bottom, #ff2929, #cf1414);
+    -webkit-border-bottom-left-radius: 5;
+    -moz-border-bottom-left-radius: 5;
+    border-bottom-left-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.btn {
+    background: #ff2929;
+    background-image: -webkit-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -moz-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -ms-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -o-linear-gradient(top, #ff2929, #cf1414);
+    background-image: linear-gradient(to bottom, #ff2929, #cf1414);
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #f72828;
+    background-image: -webkit-linear-gradient(top, #f72828, #b80000);
+    background-image: -moz-linear-gradient(top, #f72828, #b80000);
+    background-image: -ms-linear-gradient(top, #f72828, #b80000);
+    background-image: -o-linear-gradient(top, #f72828, #b80000);
+    background-image: linear-gradient(to bottom, #f72828, #b80000);
+    text-decoration: none;
+}
+
+.gradient {
+    background: #b5bdc8; /* Old browsers */
+    background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 44%, #28343b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b5bdc8), color-stop(44%,#828c95), color-stop(100%,#28343b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #b5bdc8 0%,#828c95 44%,#28343b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #b5bdc8 0%,#828c95 44%,#28343b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #b5bdc8 0%,#828c95 44%,#28343b 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 44%,#28343b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=0 ); /* IE6-9 */
+}
+
+.toplist td {
+    
+}
