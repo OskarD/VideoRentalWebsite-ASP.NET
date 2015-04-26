@@ -50,7 +50,7 @@ body {
 
 .inner_wrapper {
     overflow:auto;
-	padding-bottom: 140px;
+	padding-bottom: 80px;
 }
 
 header {
@@ -75,8 +75,8 @@ header {
 
 footer {
     position: relative;
-	margin-top: -140px; /* negative value of footer height */
-	height: 140px;
+	margin-top: -80px; /* negative value of footer height */
+	height: 80px;
 	clear:both;
     color: black;
 }
@@ -137,7 +137,12 @@ footer p {
     text-decoration: none;
 }
 
-.btn:hover {
+.btn-small {
+    padding: 2px 4px 2px 4px;
+    font-size: 12px;
+}
+
+.btn:hover, btn-small:hover {
     background: #f72828;
     background-image: -webkit-linear-gradient(top, #f72828, #b80000);
     background-image: -moz-linear-gradient(top, #f72828, #b80000);
@@ -145,6 +150,7 @@ footer p {
     background-image: -o-linear-gradient(top, #f72828, #b80000);
     background-image: linear-gradient(to bottom, #f72828, #b80000);
     text-decoration: none;
+    cursor: pointer;
 }
 
 .gradient {
@@ -183,6 +189,6 @@ footer p {
     text-decoration: none;
 }
 
-nav {
-    /*float: right;*/
+.navigation {
+    padding-bottom: 20px;
 }

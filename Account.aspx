@@ -3,7 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageContent" Runat="Server">
-    <h1>Account</h1>
     <div id="logged_in_area" Runat="Server">
         <asp:Label ID="lblLoggedInInfo" runat="server" Text="You are logged in!"></asp:Label>
         <asp:Label ID="lblLoggedIn" runat="server"></asp:Label>
