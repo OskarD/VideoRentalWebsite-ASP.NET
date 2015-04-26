@@ -1,8 +1,39 @@
-﻿html, body {
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html, body {
     height: 100%;
     min-width: 740px;
     font-family: arial, sans-serif;
     font-size: 14px;
+    color: white;
+}
+
+h1 {
+    padding: 12px 0;
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
 }
 
 body {
@@ -28,14 +59,18 @@ header {
     height: 360px;
     background-image: url("../images/Children_watching_TV_(cropped).jpg");
     background-size: cover;
+
 }
 
 .content {
-  height: 100%;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+    height: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    margin-top: -15px;
+    padding-bottom: 15px;
 }
 
 footer {
@@ -43,6 +78,7 @@ footer {
 	margin-top: -140px; /* negative value of footer height */
 	height: 140px;
 	clear:both;
+    color: black;
 }
 
 footer p {
@@ -124,4 +160,29 @@ footer p {
 
 .toplist td {
     
+}
+
+.current_location {
+    display: inline-block;
+    background: #ff2929;
+    background-image: -webkit-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -moz-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -ms-linear-gradient(top, #ff2929, #cf1414);
+    background-image: -o-linear-gradient(top, #ff2929, #cf1414);
+    background-image: linear-gradient(to bottom, #ff2929, #cf1414);
+    -webkit-border-bottom-right-radius: 5;
+    -moz-border-bottom-right-radius: 5;
+    border-bottom-right-radius: 5px;
+    -webkit-border-top-right-radius: 5;
+    -moz-border-top-right-radius: 5;
+    border-top-right-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+nav {
+    /*float: right;*/
 }
