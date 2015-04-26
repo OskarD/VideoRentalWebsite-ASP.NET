@@ -4,34 +4,29 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageContent" Runat="Server">
     <h1>Movies</h1>
-    <p>Please select a movie below:</p>
     <p>
-        <asp:DropDownList ID="ddlMovies" runat="server" AutoPostBack="True" DataSourceID="MovieListDataSource" DataTextField="title" DataValueField="title">
-        </asp:DropDownList>
-        <asp:SqlDataSource ID="MovieListDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:aspConnectionString %>" SelectCommand="SELECT [title] FROM [allmovies]"></asp:SqlDataSource>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="MovieDetailsDataSource" GridLines="None" Height="50px" Width="125px">
-            <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-            <Fields>
-                <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
-                <asp:BoundField DataField="director" HeaderText="director" SortExpression="director" />
-                <asp:BoundField DataField="company" HeaderText="company" SortExpression="company" />
-                <asp:BoundField DataField="editor" HeaderText="editor" SortExpression="editor" />
-                <asp:BoundField DataField="summary" HeaderText="summary" SortExpression="summary" />
-            </Fields>
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="MovieGridDataSource" GridLines="None">
+            <Columns>
+                <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+                <asp:BoundField DataField="Genre" HeaderText="Genre" SortExpression="Genre" />
+                <asp:BoundField DataField="Runtime" HeaderText="Runtime" SortExpression="Runtime" />
+                <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
+                <asp:BoundField DataField="Director" HeaderText="Director" SortExpression="Director" />
+                <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" />
+                <asp:BoundField DataField="Editor" HeaderText="Editor" SortExpression="Editor" />
+                <asp:CommandField ShowSelectButton="True" SelectText="Reserve" />
+            </Columns>
             <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
             <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
             <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
             <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
-        </asp:DetailsView>
+            <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#594B9C" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#33276A" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="MovieGridDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:aspConnectionString %>" SelectCommand="SELECT DISTINCT allmovies.title AS Title, genres.genre AS Genre, runtimes.runtime AS Runtime, country.name AS Country, allmovies.director AS Director, REPLACE(allmovies.company, '\r\n', ', ') AS Company, allmovies.editor AS Editor FROM allmovies INNER JOIN genres ON allmovies.id = genres.id INNER JOIN country ON allmovies.id = country.id INNER JOIN runtimes ON allmovies.id = runtimes.id"></asp:SqlDataSource>
     </p>
-
-
-
-   
-<asp:SqlDataSource ID="MovieDetailsDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:aspConnectionString %>" SelectCommand="SELECT allmovies.title, allmovies.director, allmovies.company, allmovies.editor, summaries.summary FROM allmovies LEFT OUTER JOIN summaries ON allmovies.id = summaries.id WHERE ([title] = @title)">
-    <SelectParameters>
-        <asp:ControlParameter ControlID="ddlMovies" Name="title" PropertyName="SelectedValue" Type="String" />
-    </SelectParameters>
-    </asp:SqlDataSource>
 </asp:Content>
 

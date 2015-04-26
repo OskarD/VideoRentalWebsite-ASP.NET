@@ -14,7 +14,6 @@
             <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
             <ItemStyle BackColor="#DEDFDE" ForeColor="Black" />
             <ItemTemplate>
-                Title:
                 <asp:Label ID="TitleLabel" runat="server" Text='<%# Eval("Title") %>' />
                 <br />
                 <br />
