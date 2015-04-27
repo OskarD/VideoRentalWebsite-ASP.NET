@@ -17,8 +17,7 @@
         Password<br />
         <asp:TextBox ID="txtPassword" type="password" runat="server"></asp:TextBox>
         <br />
-        <br />
-        <asp:Button ID="btnLogIn" runat="server" Text="Log In" class="btn" OnClick="btnLogIn_Click"/>
+        <asp:Button ID="btnLogIn" runat="server" Text="Log In" OnClick="btnLogIn_Click" CssClass="btn" />
         <br />
         <br />
         <asp:Label ID="lblLoginResult" runat="server"></asp:Label>

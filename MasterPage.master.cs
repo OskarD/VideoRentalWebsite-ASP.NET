@@ -11,4 +11,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
 
     }
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Search.aspx?search=" + txtSearch.Text);
+    }
 }
