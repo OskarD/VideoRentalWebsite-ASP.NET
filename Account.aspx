@@ -112,6 +112,17 @@
     </div>
     <div id="register_area" runat="server">
         <h2>Register</h2>
+        <strong>Account Access</strong><br />
+        Email<br />
+        <asp:TextBox ID="txtRegisterEmail" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="rfvRegisterEmail" runat="server" ControlToValidate="txtRegisterEmail" ErrorMessage="Enter an email" ValidationGroup="register"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="revRegisterEmail" runat="server" ControlToValidate="txtRegisterEmail" ValidationExpression="^\w[^@]*@\w[^@.]+.\w[^.]{2,4}$" ErrorMessage="Must be a valid email" ValidationGroup="register"></asp:RegularExpressionValidator>
+        <br />
+        Password<br />
+        <asp:TextBox ID="txtRegisterPassword" type="password" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="rfvRegisterPassword" runat="server" ControlToValidate="txtRegisterPassword" ErrorMessage="Enter a password" ValidationGroup="register"></asp:RequiredFieldValidator>
+        <br />
+        <br />
         <strong>Personal Details</strong><br />
         First Name<br />
         <asp:TextBox ID="txtRegisterFirstName" runat="server"></asp:TextBox>
@@ -127,36 +138,30 @@
         <br />
         Address 2<br />
         <asp:TextBox ID="txtRegisterAddress2" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="rfvRegisterAddress2" runat="server" ControlToValidate="txtRegisterAddress2" ErrorMessage="Enter an address" ValidationGroup="register"></asp:RequiredFieldValidator>
         <br />
         City<br />
         <asp:TextBox ID="txtRegisterCity" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="rfvRegisterCity" runat="server" ControlToValidate="txtRegisterCity" ErrorMessage="Enter a city" ValidationGroup="register"></asp:RequiredFieldValidator>
         <br />
         Province<br />
-        <asp:TextBox ID="txtRegisterProvince" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="rfvRegisterProvince" runat="server" ControlToValidate="txtRegisterProvince" ErrorMessage="Enter a province (Two letters)" ValidationGroup="register"></asp:RequiredFieldValidator>
+        <asp:DropDownList ID="ddlRegisterProvince" runat="server">
+            <asp:ListItem Value="none"> -- Select a province -- </asp:ListItem>
+            <asp:ListItem Value="ON">ON</asp:ListItem>
+            <asp:ListItem Value="BC">BC</asp:ListItem>
+            <asp:ListItem Value="QB">QB</asp:ListItem>
+            <asp:ListItem Value="MB">MB</asp:ListItem>
+            <asp:ListItem Value="NL">NUFIE</asp:ListItem>
+        </asp:DropDownList>
+        <asp:RequiredFieldValidator ID="rfvProvinces" runat="server" ControlToValidate="ddlRegisterProvince" InitialValue="none" ErrorMessage="You must select a province" Display="Dynamic" ValidationGroup="register"></asp:RequiredFieldValidator>
         <br />
         Postal Code<br />
-        <asp:TextBox ID="txtRegisterPostalCode" runat="server"></asp:TextBox>
+        <asp:TextBox ID="txtRegisterPostalCode" runat="server" placeholder="LNLNLN"></asp:TextBox>
         <asp:RequiredFieldValidator ID="rfvRegisterPostalCode" runat="server" ControlToValidate="txtRegisterPostalCode" ErrorMessage="Enter a postal code" ValidationGroup="register"></asp:RequiredFieldValidator><asp:RegularExpressionValidator ID="revRegisterPostalCode" runat="server" ControlToValidate="txtRegisterPostalCode" ValidationExpression="([A-Z]\d){3}" ErrorMessage="Must be a valid postal code" ValidationGroup="register"></asp:RegularExpressionValidator>
             
         <br />
         Phone<br />
         <asp:TextBox ID="txtRegisterPhone" runat="server"></asp:TextBox>
         <asp:RequiredFieldValidator ID="rfvRegisterPhone" runat="server" ControlToValidate="txtRegisterPhone" ErrorMessage="Enter a phone number" ValidationGroup="register"></asp:RequiredFieldValidator>
-        <br />
-        <br />
-        
-        <strong>Account Access</strong><br />
-        Email<br />
-        <asp:TextBox ID="txtRegisterEmail" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="rfvRegisterEmail" runat="server" ControlToValidate="txtRegisterEmail" ErrorMessage="Enter an email" ValidationGroup="register"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="revRegisterEmail" runat="server" ControlToValidate="txtRegisterEmail" ValidationExpression="^\w[^@]*@\w[^@.]+.\w[^.]{2,4}$" ErrorMessage="Must be a valid email" ValidationGroup="register"></asp:RegularExpressionValidator>
-        <br />
-        Password<br />
-        <asp:TextBox ID="txtRegisterPassword" type="password" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="rfvRegisterPassword" runat="server" ControlToValidate="txtRegisterPassword" ErrorMessage="Enter a password" ValidationGroup="register"></asp:RequiredFieldValidator>
         <br />
         <br />
         <asp:Button ID="btnRegisterPerform" runat="server" Text="Register" OnClick="btnRegisterPerform_Click" CssClass="btn" ValidationGroup="register" />

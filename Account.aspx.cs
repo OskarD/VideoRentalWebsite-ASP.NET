@@ -62,7 +62,7 @@ public partial class Account : System.Web.UI.Page
         customer.Address1 = txtRegisterAddress1.Text;
         customer.Address2 = txtRegisterAddress2.Text;
         customer.City = txtRegisterCity.Text;
-        customer.Province = txtRegisterProvince.Text;
+        customer.Province = ddlRegisterProvince.SelectedItem.Value;
         customer.PostalCode = txtRegisterPostalCode.Text;
         customer.PhoneNumber = txtRegisterPhone.Text;
         customer.Email = txtRegisterEmail.Text;
