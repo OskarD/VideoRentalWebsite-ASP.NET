@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageContent" Runat="Server">
     <p>
+        <asp:Label ID="lblResult" runat="server"></asp:Label>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataSourceID="MovieGridDataSource" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
@@ -28,7 +29,6 @@
         <asp:SqlDataSource ID="MovieGridDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:aspConnectionString %>" SelectCommand="SELECT DISTINCT allmovies.title AS Title, genres.genre AS Genre, runtimes.runtime AS Runtime, country.name AS Country, allmovies.director AS Director, REPLACE(allmovies.company, '\r\n', ', ') AS Company, allmovies.editor AS Editor FROM allmovies INNER JOIN genres ON allmovies.id = genres.id INNER JOIN country ON allmovies.id = country.id INNER JOIN runtimes ON allmovies.id = runtimes.id"></asp:SqlDataSource>
     </p>
     <p>
-        <asp:Label ID="lblResult" runat="server"></asp:Label>
-    </p>
+        &nbsp;</p>
 </asp:Content>
 

@@ -19,6 +19,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+strong {
+    font-weight: bold;
+}
+
 html, body {
     height: 100%;
     min-width: 740px;
@@ -42,6 +46,10 @@ body {
     padding: 0;
     position: relative;
     background-color: #b5bdc8;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .wrapper {
