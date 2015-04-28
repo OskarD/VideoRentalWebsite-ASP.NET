@@ -6,6 +6,7 @@
     <div id="logged_in_area" Runat="Server">
         <asp:Label ID="lblLoggedIn" runat="server"></asp:Label>
         <br />
+        <asp:Button ID="btnAdminPage" runat="server" CssClass="btn" OnClick="btnAdminPage_Click" Text="Admin Page" Visible="False" />
         <br />
         <asp:ListView ID="ListView1" runat="server" DataSourceID="ReservationsDataList">
             <AlternatingItemTemplate>
@@ -90,6 +91,7 @@
                 <asp:SessionParameter Name="customer_id" SessionField="customer" />
             </SelectParameters>
         </asp:SqlDataSource>
+        <br />
         <br />
         <asp:Button ID="btnLogOut" runat="server" Text="Log Out" OnClick="btnLogOut_Click" CssClass="btn btn-small" />
     </div>

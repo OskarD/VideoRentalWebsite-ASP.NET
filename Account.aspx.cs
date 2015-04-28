@@ -20,6 +20,9 @@ public partial class Account : System.Web.UI.Page
             not_logged_in_area.Attributes.Add("hidden", "true");
             Customer customer = (Customer) Session["Customer"];
 
+            if (customer.Admin == 1)
+                btnAdminPage.Visible = true;
+
             lblLoggedIn.Text = customer.ToHTML();
         }
     }
@@ -74,5 +77,9 @@ public partial class Account : System.Web.UI.Page
         not_logged_in_area.Attributes.Remove("hidden");
         register_area.Attributes.Add("hidden", "true");
 
+    }
+    protected void btnAdminPage_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Admin.aspx");
     }
 }
