@@ -1,0 +1,5 @@
+E:\Dropbox\Humber\CPAN 223 - Framework Programming\Video Rental Website\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+E:\Dropbox\Humber\CPAN 223 - Framework Programming\Video Rental Website\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+E:\Dropbox\Humber\CPAN 223 - Framework Programming\Video Rental Website\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+E:\Dropbox\Humber\CPAN 223 - Framework Programming\Video Rental Website\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+E:\Dropbox\Humber\CPAN 223 - Framework Programming\Video Rental Website\ClassLibrary1\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
